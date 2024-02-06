@@ -1,4 +1,4 @@
 {
-  "*.(js,cjs,mjs)": ["eslint --fix"],
-  "*": ["prettier --write --no-error-on-unmatched-pattern --ignore-unknown"]
+  "*.(js)": ["pnpm lint:fix"],
+  "*.(js,jsx,json,css)": ["pnpm format"]
 }
