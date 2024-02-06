@@ -1,24 +1,8 @@
 {
   "name": "vite-multi-entry-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vite template for a small project.",
   "type": "module",
-  "keywords": [
-    "vanilla",
-    "javascript",
-    "template",
-    "boilerplate",
-    "boilerplate-template",
-    "postcss",
-    "eslint",
-    "prettier",
-    "scaffold",
-    "scaffold-template",
-    "vite",
-    "vitejs",
-    "vite-template",
-    "vitejs-template"
-  ],
   "scripts": {
     "dev": "vite --host --open",
     "lint": "eslint --ext .js ./",
@@ -26,13 +10,12 @@
     "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
     "build": "vite build",
     "preview": "vite preview --open",
-    "buildpreview": "vite build && vite preview --open"
+    "build-preview": "vite build && vite preview --open"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
     "cssnano": "^6.0.3",
     "eslint": "^8.56.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
