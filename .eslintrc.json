@@ -2,8 +2,7 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2023": true,
-    "node": true
+    "es2023": true
   },
   "extends": [
     "eslint:recommended",
@@ -19,19 +18,43 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js"],
-        "moduleDirectory": ["node_modules", "src/"]
+        "extensions": [".js"]
+      },
+      "eslint-import-resolver-custom-alias": {
+        "alias": {
+          "@": "src"
+        },
+        "extensions": [".js"]
       }
     }
   },
   "rules": {
     "prettier/prettier": "error",
-    "no-console": "error",
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": true
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.js"],
+      "rules": {
+        "no-console": "warn",
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": false
+          }
+        ]
+      }
+    },
+    {
+      "files": ["!src/**/*"],
+      "env": {
+        "node": true
+      }
+    }
+  ]
 }
